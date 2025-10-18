@@ -72,7 +72,7 @@ $user = $_SESSION['user'] ?? null;
 
         <!-- Footer -->
         <div class="mt-6 text-sm text-gray-500 text-center">
-            &copy; <?= date('Y') ?> Sistem User Management - Built with ❤️ & Tailwind CSS
+            &copy; <?= date('Y') ?> Ryan - Copyriqht Terlindungi.
         </div>
     </div>
 
