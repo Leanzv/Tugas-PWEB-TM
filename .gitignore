@@ -1,11 +1,5 @@
 /vendor/
 .env
-.env.backup
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-.idea/
-.vscode/
-*.log
+/node_modules/
+.DS_Store
+Thumbs.db

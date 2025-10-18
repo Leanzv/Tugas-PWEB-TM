@@ -1,23 +1,26 @@
-# My Project
+# MyProject
 
-Project ini adalah aplikasi web PHP sederhana dengan fitur autentikasi dan manajemen user.
+Ini adalah project [deskripsi singkat project Anda].
 
-## Cara Instalasi
+## Instalasi
 
 1. Clone repository ini:
 ```bash
-git clone https://github.com/username/myproject.git
-cd myproject
+git clone https://github.com/[username]/myproject.git
 ```
 
 2. Import database:
-- Buat database baru di MySQL
-- Import file sql/create_db.sql ke database yang baru dibuat
+- Buka file `sql/create_db.sql`
+- Import menggunakan phpMyAdmin atau MySQL CLI
 
-3. Konfigurasi database:
-- Buka file `config/config.php`
-- Sesuaikan pengaturan database (hostname, username, password, database name)
+3. Konfigurasi:
+- Copy file `config/config.php.example` ke `config/config.php`
+- Sesuaikan konfigurasi database
 
-4. Jalankan web server (Apache/Nginx)
+## Teknologi yang Digunakan
+- PHP
+- MySQL
+- [teknologi lainnya]
 
-5. Akses aplikasi melalui browser
+## Fitur
+- [Daftar fitur-fitur utama]
