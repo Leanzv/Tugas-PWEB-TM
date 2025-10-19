@@ -1,5 +1,4 @@
 <?php
-// Gunakan session tanpa session_start()
 $user = $_SESSION['user'] ?? null;
 ?>
 
@@ -14,7 +13,6 @@ $user = $_SESSION['user'] ?? null;
 <body class="bg-gray-100 font-sans min-h-screen">
 
     <div class="max-w-6xl mx-auto mt-10 bg-white shadow-xl rounded-2xl p-8">
-        <!-- Header -->
         <div class="flex justify-between items-center border-b pb-4 mb-6">
             <h1 class="text-3xl font-bold text-gray-800">📋 Daftar User</h1>
             <div class="text-right">
@@ -26,7 +24,6 @@ $user = $_SESSION['user'] ?? null;
             </div>
         </div>
 
-        <!-- Tombol Tambah -->
         <div class="mb-6 flex justify-end">
             <a href="/user/create"
                class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow">
@@ -34,7 +31,6 @@ $user = $_SESSION['user'] ?? null;
             </a>
         </div>
 
-        <!-- Tabel User -->
         <div class="overflow-x-auto">
             <table class="w-full border border-gray-300 rounded-lg overflow-hidden shadow-sm text-sm">
                 <thead class="bg-blue-600 text-white uppercase text-left">
@@ -70,7 +66,6 @@ $user = $_SESSION['user'] ?? null;
             </table>
         </div>
 
-        <!-- Footer -->
         <div class="mt-6 text-sm text-gray-500 text-center">
             &copy; <?= date('Y') ?> Ryan - Copyriqht Terlindungi.
         </div>

@@ -1,9 +1,8 @@
 <?php
-// Autoload dan config
+
 require_once __DIR__ . '/../config/config.php';
 $config = include __DIR__ . '/../config/config.php';
 
-// Start session (cukup sekali di sini)
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -13,11 +12,9 @@ $pdo = new PDO($dsn, $config['db']['user'], $config['db']['pass'], [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
 
-// Load controllers
 require_once __DIR__ . '/../app/Controllers/UserController.php';
 require_once __DIR__ . '/../app/Controllers/AuthController.php';
 
-// Parse URL
 $path = $_GET['url'] ?? '';
 $parts = array_values(array_filter(explode('/', $path)));
 
@@ -28,7 +25,6 @@ $id = $parts[2] ?? null;
 $userCtrl = new UserController($pdo);
 $authCtrl = new AuthController($pdo);
 
-// Routes
 if ($controller === 'auth' && isset($parts[1]) && $parts[1] === 'login') {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') $authCtrl->login();
     else $authCtrl->showLogin();
@@ -41,7 +37,6 @@ if ($controller === 'auth' && isset($parts[1]) && $parts[1] === 'login') {
     $authCtrl->logout();
 
 } elseif ($controller === 'user') {
-    // Protect halaman user (simple)
     if (!isset($_SESSION['user'])) {
         header('Location: /auth/login');
         exit;

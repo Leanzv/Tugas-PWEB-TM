@@ -35,7 +35,6 @@ class User {
     }
 
     public function update($id, $data) {
-        // jika password ada, update; kalau tidak, lewati
         if (!empty($data['password'])) {
             $stmt = $this->pdo->prepare("UPDATE users SET username=?, password=?, nama=?, email=?, role=? WHERE id=?");
             return $stmt->execute([$data['username'], $data['password'], $data['nama'], $data['email'], $data['role'], $id]);

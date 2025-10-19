@@ -6,7 +6,6 @@ class UserController {
 
     public function __construct($pdo) {
         $this->userModel = new User($pdo);
-        // Tidak perlu session_start()
     }
 
     public function index() {

@@ -6,7 +6,6 @@ class AuthController {
 
     public function __construct($pdo) {
         $this->userModel = new User($pdo);
-        // HAPUS session_start() — cukup dijalankan di index.php
     }
 
     public function showLogin() {
@@ -52,7 +51,6 @@ class AuthController {
     }
 
     public function logout() {
-        // Tidak perlu session_start() ulang, session sudah aktif
         session_unset();
         session_destroy();
         header('Location: /auth/login');
